@@ -52,12 +52,12 @@ namespace ExtBloq
         private Rectangle mathsmarkROI = new Rectangle(1150,1243,385,66); // Maths marks
         private Rectangle permanantadd1ROI = new Rectangle(484,1316,1048,66); // Permanent address of father line 1
         private Rectangle permanantadd2ROI = new Rectangle(126,1387,1364,66); // Permanent address of father line 2 
-        private Rectangle telephonenumberROI = new Rectangle(); // Telephone number
+        private Rectangle permaddtelephonenumberROI = new Rectangle(306,1459,617,63); // Telephone number
         private Rectangle annualincomeROI = new Rectangle(1119, 1462, 368, 61); // Annual income
-        private Rectangle fatheroffadd1ROI = new Rectangle(); // official address of father line 1
-        private Rectangle fatheroffadd2ROI = new Rectangle(); // official address of father line 2
-        private Rectangle fatherofftelephonenumberROI = new Rectangle(); // official telephone number
-        private Rectangle stdcodeROI = new Rectangle(); // STD code
+        private Rectangle fatheroffadd1ROI = new Rectangle(704,1528,827,70); // official address of father line 1
+        private Rectangle fatheroffadd2ROI = new Rectangle(128,1605,1401,67); // official address of father line 2
+        private Rectangle fatherofftelephonenumberROI = new Rectangle(306,1678,613,65); // official telephone number
+        private Rectangle stdcodeROI = new Rectangle(1042,1676,484,68); // STD code
         private Rectangle motheroffaddROI = new Rectangle(); // official address of mother
         private Rectangle motherofftelephonenumberROI = new Rectangle(); // official telephone number of mother
         private Rectangle motheroffstdcodeROI = new Rectangle(); // STD code of mother
@@ -134,6 +134,11 @@ namespace ExtBloq
                 string mathsmarks = ExtractTextFromROI(mathsmarkROI);
                 string permaddfather1 = ExtractTextFromROI(permanantadd1ROI);
                 string permaddfather2 = ExtractTextFromROI(permanantadd2ROI);
+                string permaddtelephonenumber = ExtractTextFromROI(permaddtelephonenumberROI);
+                string officaladdFather1 = ExtractTextFromROI(fatheroffadd1ROI);
+                string officialaddFather2 = ExtractTextFromROI(fatheroffadd2ROI);
+                string officialfatherphoneno = ExtractTextFromROI(fatherofftelephonenumberROI);
+                string stdcode = ExtractTextFromROI(stdcodeROI);
 
                 // Display extracted data
                 nametextBox.Text = name;
@@ -157,6 +162,10 @@ namespace ExtBloq
                 chemmarkBox.Text = chemmarks;
                 mathsmarkBox.Text = mathsmarks;
                 permaddfatherBox.Text = permaddfather1 + " " + permaddfather2;
+                fathermobileBox.Text = permaddtelephonenumber;
+                officialaddfatherBox.Text = officaladdFather1 + " " + officialaddFather2;
+                officephoneBox.Text = stdcode + " " + officialfatherphoneno;
+
 
                 
             }

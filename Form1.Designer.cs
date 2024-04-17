@@ -83,6 +83,8 @@
             this.mathsmarkBox = new System.Windows.Forms.TextBox();
             this.permfatheraddBox = new System.Windows.Forms.Label();
             this.permaddfatherBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.officialaddfatherBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -539,11 +541,30 @@
             this.permaddfatherBox.Size = new System.Drawing.Size(230, 20);
             this.permaddfatherBox.TabIndex = 54;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1042, 431);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 26);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Official address\r\nof Father : \r\n";
+            // 
+            // officialaddfatherBox
+            // 
+            this.officialaddfatherBox.Location = new System.Drawing.Point(1149, 434);
+            this.officialaddfatherBox.Margin = new System.Windows.Forms.Padding(2);
+            this.officialaddfatherBox.Name = "officialaddfatherBox";
+            this.officialaddfatherBox.Size = new System.Drawing.Size(230, 20);
+            this.officialaddfatherBox.TabIndex = 56;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 805);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.officialaddfatherBox);
             this.Controls.Add(this.permfatheraddBox);
             this.Controls.Add(this.permaddfatherBox);
             this.Controls.Add(this.label10);
@@ -663,6 +684,8 @@
         private System.Windows.Forms.TextBox mathsmarkBox;
         private System.Windows.Forms.Label permfatheraddBox;
         private System.Windows.Forms.TextBox permaddfatherBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox officialaddfatherBox;
     }
 }
 
