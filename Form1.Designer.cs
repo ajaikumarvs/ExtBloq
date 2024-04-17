@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.nametextBox = new System.Windows.Forms.TextBox();
-            this.addresstextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -109,6 +109,9 @@
             this.ishostelerBox = new System.Windows.Forms.TextBox();
             this.collegeemailBox = new System.Windows.Forms.TextBox();
             this.boardingpointBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.currentdimensionsLabel = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpicBox)).BeginInit();
@@ -123,7 +126,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 40);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Student Record";
+            this.button2.Text = "Open a Student Record";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -151,15 +154,6 @@
             this.nametextBox.TabIndex = 5;
             this.nametextBox.TextChanged += new System.EventHandler(this.nametextBox_TextChanged);
             // 
-            // addresstextBox
-            // 
-            this.addresstextBox.Location = new System.Drawing.Point(643, 11);
-            this.addresstextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.addresstextBox.Name = "addresstextBox";
-            this.addresstextBox.Size = new System.Drawing.Size(264, 20);
-            this.addresstextBox.TabIndex = 6;
-            this.addresstextBox.TextChanged += new System.EventHandler(this.addresstextBox_TextChanged);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -183,7 +177,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(616, 412);
+            this.label1.Location = new System.Drawing.Point(614, 402);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 21);
             this.label1.TabIndex = 10;
@@ -193,7 +187,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
-            this.label2.Location = new System.Drawing.Point(638, 434);
+            this.label2.Location = new System.Drawing.Point(640, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 16);
             this.label2.TabIndex = 11;
@@ -646,6 +640,7 @@
             this.studentnameBox.Size = new System.Drawing.Size(92, 16);
             this.studentnameBox.TabIndex = 64;
             this.studentnameBox.Text = "Student Name";
+            this.studentnameBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // studentpicBox
             // 
@@ -786,11 +781,37 @@
             this.boardingpointBox.Size = new System.Drawing.Size(135, 20);
             this.boardingpointBox.TabIndex = 81;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
+            this.label15.Location = new System.Drawing.Point(112, 23);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(188, 16);
+            this.label15.TabIndex = 82;
+            this.label15.Text = "Ensure that the image is 1653*2338";
+            // 
+            // currentdimensionsLabel
+            // 
+            this.currentdimensionsLabel.AutoSize = true;
+            this.currentdimensionsLabel.Location = new System.Drawing.Point(9, 706);
+            this.currentdimensionsLabel.Name = "currentdimensionsLabel";
+            this.currentdimensionsLabel.Size = new System.Drawing.Size(98, 13);
+            this.currentdimensionsLabel.TabIndex = 83;
+            this.currentdimensionsLabel.Text = "No Image Selected";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 805);
+            this.Controls.Add(this.currentdimensionsLabel);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.boardingpointBox);
             this.Controls.Add(this.collegeemailBox);
             this.Controls.Add(this.ishostelerBox);
@@ -867,10 +888,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.nametextBox);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.addresstextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
-            this.Cursor = System.Windows.Forms.Cursors.No;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "ExtBloq";
@@ -890,7 +910,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox nametextBox;
-        private System.Windows.Forms.TextBox addresstextBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -966,6 +985,9 @@
         private System.Windows.Forms.TextBox ishostelerBox;
         private System.Windows.Forms.TextBox collegeemailBox;
         private System.Windows.Forms.TextBox boardingpointBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label currentdimensionsLabel;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

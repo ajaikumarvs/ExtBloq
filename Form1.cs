@@ -103,15 +103,27 @@ namespace ExtBloq
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pictureBox2.Visible = true;
-            label1.Visible = false;
+            
+            
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                label1.Visible = false;
+                label2.Visible = false;
+                pictureBox2.Visible = true;
+
                 originalImage = new Bitmap(openFileDialog.FileName);
                 pictureBox1.Image = originalImage;
+
+                //display current dimensions of the image
+                currentdimensionsLabel.Text = pictureBox1.Image.Width + " x " + pictureBox1.Image.Height;
+                if (currentdimensionsLabel.Text != "1653 x 2338")
+                {
+                    currentdimensionsLabel.Text = pictureBox1.Image.Width + " x " + pictureBox1.Image.Height + " Warning!, the image is not of the size 1653 x 2338, this may affect accuracy.";
+                }
+
 
                 // Extract data from ROIs
                 string name = ExtractTextFromROI(nameROI);
@@ -150,7 +162,7 @@ namespace ExtBloq
 
                 // Display extracted data
                 nametextBox.Text = name;
-                addresstextBox.Text = address;
+                
                 genderBox.Text = sex;
                 branchBox.Text = branch;
                 dobBox.Text = dob;
