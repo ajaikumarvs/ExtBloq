@@ -62,7 +62,10 @@ namespace ExtBloq
         private Rectangle motherofftelephonenumberROI = new Rectangle(301,1824,618,64); // official telephone number of mother
         private Rectangle motheroffstdcodeROI = new Rectangle(1042,1824,490,64); // STD code of mother
         private Rectangle scholarshipROI = new Rectangle(793,1893,736,68); // Scholarship
-        private Rectangle medicalissuesROI = new Rectangle(); //    Medical issues
+        private Rectangle medicalissuesROI = new Rectangle(391,1970,1139,65); //    Medical issues
+        private Rectangle studentphotoROI = new Rectangle(1249,287,240,297); //Student photo
+        private Rectangle studentsignphotoROI = new Rectangle(524,2035,373,91); //Student signature
+        private Rectangle parentsignphotoROI = new Rectangle(1150, 2040, 380, 86); //Parent signature
 
 
 
@@ -143,6 +146,7 @@ namespace ExtBloq
                 string motherphoneno = ExtractTextFromROI(motherofftelephonenumberROI);
                 string motherphonestdcode = ExtractTextFromROI(motheroffstdcodeROI);
                 string scholarship = ExtractTextFromROI(scholarshipROI);
+                string medicalissues = ExtractTextFromROI(medicalissuesROI);
 
                 // Display extracted data
                 nametextBox.Text = name;
@@ -172,7 +176,16 @@ namespace ExtBloq
                 fulladdmotherBox.Text = fulladdmother;
                 mothermobileBox.Text = motherphonestdcode + " " + motherphoneno;
                 scolarshipBox.Text = scholarship;
+                medicalissuesBox.Text = medicalissues;
                 
+
+                //Image extractions for student photo and signatures
+                Bitmap studentphoto = ExtractImageFromROI(studentphotoROI);
+                Bitmap studentsign = ExtractImageFromROI(studentsignphotoROI);
+                Bitmap parentsign = ExtractImageFromROI(parentsignphotoROI);
+                studentpicBox.Image = studentphoto;
+                studentsignBox.Image = studentsign;
+                parentsignBox.Image = parentsign;
             }
 
         }
@@ -199,6 +212,16 @@ namespace ExtBloq
                 }
             }
 
+        private Bitmap ExtractImageFromROI(Rectangle roi)
+        {
+            Bitmap extractedImage = new Bitmap(roi.Width, roi.Height);
+            using (Graphics g = Graphics.FromImage(extractedImage))
+            {
+                g.DrawImage(originalImage, 0, 0, roi, GraphicsUnit.Pixel);
+            }
+            return extractedImage;
+        }
+
         private void addresstextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -209,79 +232,9 @@ namespace ExtBloq
 
         }
 
-       
+        private void nametextBox_TextChanged(object sender, EventArgs e)
+        {
+            studentnameBox.Text = nametextBox.Text;
+        }
     }
     }
-
-                
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

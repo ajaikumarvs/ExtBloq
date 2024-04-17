@@ -91,8 +91,29 @@
             this.scolarshipBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.medicalissuesBox = new System.Windows.Forms.TextBox();
+            this.studentnameBox = new System.Windows.Forms.Label();
+            this.studentpicBox = new System.Windows.Forms.PictureBox();
+            this.studentsignBox = new System.Windows.Forms.PictureBox();
+            this.parentsignBox = new System.Windows.Forms.PictureBox();
+            this.streetBox = new System.Windows.Forms.TextBox();
+            this.street2Box = new System.Windows.Forms.TextBox();
+            this.districtBox = new System.Windows.Forms.TextBox();
+            this.pinBox = new System.Windows.Forms.TextBox();
+            this.stateBox = new System.Windows.Forms.TextBox();
+            this.houseBox = new System.Windows.Forms.TextBox();
+            this.street3Box = new System.Windows.Forms.TextBox();
+            this.street4Box = new System.Windows.Forms.TextBox();
+            this.district2Box = new System.Windows.Forms.TextBox();
+            this.pin2Box = new System.Windows.Forms.TextBox();
+            this.state2Box = new System.Windows.Forms.TextBox();
+            this.ishostelerBox = new System.Windows.Forms.TextBox();
+            this.collegeemailBox = new System.Windows.Forms.TextBox();
+            this.boardingpointBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentpicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsignBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsignBox)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -128,6 +149,7 @@
             this.nametextBox.Name = "nametextBox";
             this.nametextBox.Size = new System.Drawing.Size(135, 20);
             this.nametextBox.TabIndex = 5;
+            this.nametextBox.TextChanged += new System.EventHandler(this.nametextBox_TextChanged);
             // 
             // addresstextBox
             // 
@@ -356,7 +378,7 @@
             // branchLabel
             // 
             this.branchLabel.AutoSize = true;
-            this.branchLabel.Location = new System.Drawing.Point(1042, 282);
+            this.branchLabel.Location = new System.Drawing.Point(1040, 253);
             this.branchLabel.Name = "branchLabel";
             this.branchLabel.Size = new System.Drawing.Size(50, 13);
             this.branchLabel.TabIndex = 33;
@@ -364,7 +386,7 @@
             // 
             // branchBox
             // 
-            this.branchBox.Location = new System.Drawing.Point(1149, 282);
+            this.branchBox.Location = new System.Drawing.Point(1147, 253);
             this.branchBox.Margin = new System.Windows.Forms.Padding(2);
             this.branchBox.Name = "branchBox";
             this.branchBox.Size = new System.Drawing.Size(230, 20);
@@ -372,7 +394,7 @@
             // 
             // rollnoBox
             // 
-            this.rollnoBox.Location = new System.Drawing.Point(1149, 306);
+            this.rollnoBox.Location = new System.Drawing.Point(1147, 277);
             this.rollnoBox.Margin = new System.Windows.Forms.Padding(2);
             this.rollnoBox.Name = "rollnoBox";
             this.rollnoBox.Size = new System.Drawing.Size(230, 20);
@@ -381,7 +403,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1043, 307);
+            this.label3.Location = new System.Drawing.Point(1041, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 36;
@@ -390,7 +412,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1042, 332);
+            this.label4.Location = new System.Drawing.Point(1040, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 37;
@@ -398,7 +420,7 @@
             // 
             // rankBox
             // 
-            this.rankBox.Location = new System.Drawing.Point(1149, 330);
+            this.rankBox.Location = new System.Drawing.Point(1147, 301);
             this.rankBox.Margin = new System.Windows.Forms.Padding(2);
             this.rankBox.Name = "rankBox";
             this.rankBox.Size = new System.Drawing.Size(230, 20);
@@ -406,7 +428,7 @@
             // 
             // dateofjoinBox
             // 
-            this.dateofjoinBox.Location = new System.Drawing.Point(1149, 354);
+            this.dateofjoinBox.Location = new System.Drawing.Point(1147, 325);
             this.dateofjoinBox.Margin = new System.Windows.Forms.Padding(2);
             this.dateofjoinBox.Name = "dateofjoinBox";
             this.dateofjoinBox.Size = new System.Drawing.Size(230, 20);
@@ -415,7 +437,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1042, 354);
+            this.label5.Location = new System.Drawing.Point(1040, 325);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 40;
@@ -440,7 +462,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1042, 378);
+            this.label6.Location = new System.Drawing.Point(1040, 349);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 44;
@@ -448,7 +470,7 @@
             // 
             // fulladdBox
             // 
-            this.fulladdBox.Location = new System.Drawing.Point(1149, 378);
+            this.fulladdBox.Location = new System.Drawing.Point(1147, 349);
             this.fulladdBox.Margin = new System.Windows.Forms.Padding(2);
             this.fulladdBox.Name = "fulladdBox";
             this.fulladdBox.Size = new System.Drawing.Size(230, 20);
@@ -465,7 +487,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1040, 540);
+            this.label7.Location = new System.Drawing.Point(1038, 511);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 47;
@@ -473,7 +495,7 @@
             // 
             // eduqualificationBox
             // 
-            this.eduqualificationBox.Location = new System.Drawing.Point(1147, 540);
+            this.eduqualificationBox.Location = new System.Drawing.Point(1145, 511);
             this.eduqualificationBox.Margin = new System.Windows.Forms.Padding(2);
             this.eduqualificationBox.Name = "eduqualificationBox";
             this.eduqualificationBox.Size = new System.Drawing.Size(230, 20);
@@ -482,7 +504,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1040, 564);
+            this.label8.Location = new System.Drawing.Point(1038, 535);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 49;
@@ -490,7 +512,7 @@
             // 
             // phymarkBox
             // 
-            this.phymarkBox.Location = new System.Drawing.Point(1147, 564);
+            this.phymarkBox.Location = new System.Drawing.Point(1145, 535);
             this.phymarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.phymarkBox.Name = "phymarkBox";
             this.phymarkBox.Size = new System.Drawing.Size(230, 20);
@@ -499,7 +521,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1040, 588);
+            this.label9.Location = new System.Drawing.Point(1038, 559);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 51;
@@ -507,7 +529,7 @@
             // 
             // chemmarkBox
             // 
-            this.chemmarkBox.Location = new System.Drawing.Point(1147, 588);
+            this.chemmarkBox.Location = new System.Drawing.Point(1145, 559);
             this.chemmarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.chemmarkBox.Name = "chemmarkBox";
             this.chemmarkBox.Size = new System.Drawing.Size(230, 20);
@@ -516,7 +538,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1040, 612);
+            this.label10.Location = new System.Drawing.Point(1038, 583);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 53;
@@ -524,7 +546,7 @@
             // 
             // mathsmarkBox
             // 
-            this.mathsmarkBox.Location = new System.Drawing.Point(1147, 612);
+            this.mathsmarkBox.Location = new System.Drawing.Point(1145, 583);
             this.mathsmarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.mathsmarkBox.Name = "mathsmarkBox";
             this.mathsmarkBox.Size = new System.Drawing.Size(230, 20);
@@ -533,7 +555,7 @@
             // permfatheraddBox
             // 
             this.permfatheraddBox.AutoSize = true;
-            this.permfatheraddBox.Location = new System.Drawing.Point(1042, 402);
+            this.permfatheraddBox.Location = new System.Drawing.Point(1040, 373);
             this.permfatheraddBox.Name = "permfatheraddBox";
             this.permfatheraddBox.Size = new System.Drawing.Size(99, 26);
             this.permfatheraddBox.TabIndex = 55;
@@ -541,7 +563,7 @@
             // 
             // permaddfatherBox
             // 
-            this.permaddfatherBox.Location = new System.Drawing.Point(1149, 405);
+            this.permaddfatherBox.Location = new System.Drawing.Point(1147, 376);
             this.permaddfatherBox.Margin = new System.Windows.Forms.Padding(2);
             this.permaddfatherBox.Name = "permaddfatherBox";
             this.permaddfatherBox.Size = new System.Drawing.Size(230, 20);
@@ -550,7 +572,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1042, 431);
+            this.label11.Location = new System.Drawing.Point(1040, 402);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 26);
             this.label11.TabIndex = 57;
@@ -558,7 +580,7 @@
             // 
             // officialaddfatherBox
             // 
-            this.officialaddfatherBox.Location = new System.Drawing.Point(1149, 434);
+            this.officialaddfatherBox.Location = new System.Drawing.Point(1147, 405);
             this.officialaddfatherBox.Margin = new System.Windows.Forms.Padding(2);
             this.officialaddfatherBox.Name = "officialaddfatherBox";
             this.officialaddfatherBox.Size = new System.Drawing.Size(230, 20);
@@ -567,7 +589,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1042, 470);
+            this.label12.Location = new System.Drawing.Point(1040, 441);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 26);
             this.label12.TabIndex = 59;
@@ -575,7 +597,7 @@
             // 
             // fulladdmotherBox
             // 
-            this.fulladdmotherBox.Location = new System.Drawing.Point(1149, 473);
+            this.fulladdmotherBox.Location = new System.Drawing.Point(1147, 444);
             this.fulladdmotherBox.Margin = new System.Windows.Forms.Padding(2);
             this.fulladdmotherBox.Name = "fulladdmotherBox";
             this.fulladdmotherBox.Size = new System.Drawing.Size(230, 20);
@@ -584,7 +606,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1040, 640);
+            this.label13.Location = new System.Drawing.Point(1038, 611);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 13);
             this.label13.TabIndex = 61;
@@ -592,7 +614,7 @@
             // 
             // scolarshipBox
             // 
-            this.scolarshipBox.Location = new System.Drawing.Point(1147, 640);
+            this.scolarshipBox.Location = new System.Drawing.Point(1145, 611);
             this.scolarshipBox.Margin = new System.Windows.Forms.Padding(2);
             this.scolarshipBox.Name = "scolarshipBox";
             this.scolarshipBox.Size = new System.Drawing.Size(230, 20);
@@ -601,7 +623,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1040, 664);
+            this.label14.Location = new System.Drawing.Point(1038, 635);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(86, 13);
             this.label14.TabIndex = 63;
@@ -609,17 +631,184 @@
             // 
             // medicalissuesBox
             // 
-            this.medicalissuesBox.Location = new System.Drawing.Point(1147, 664);
+            this.medicalissuesBox.Location = new System.Drawing.Point(1145, 635);
             this.medicalissuesBox.Margin = new System.Windows.Forms.Padding(2);
             this.medicalissuesBox.Name = "medicalissuesBox";
             this.medicalissuesBox.Size = new System.Drawing.Size(230, 20);
             this.medicalissuesBox.TabIndex = 62;
+            // 
+            // studentnameBox
+            // 
+            this.studentnameBox.AutoSize = true;
+            this.studentnameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentnameBox.Location = new System.Drawing.Point(1175, 203);
+            this.studentnameBox.Name = "studentnameBox";
+            this.studentnameBox.Size = new System.Drawing.Size(92, 16);
+            this.studentnameBox.TabIndex = 64;
+            this.studentnameBox.Text = "Student Name";
+            // 
+            // studentpicBox
+            // 
+            this.studentpicBox.Location = new System.Drawing.Point(1171, 95);
+            this.studentpicBox.Name = "studentpicBox";
+            this.studentpicBox.Size = new System.Drawing.Size(100, 102);
+            this.studentpicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.studentpicBox.TabIndex = 65;
+            this.studentpicBox.TabStop = false;
+            // 
+            // studentsignBox
+            // 
+            this.studentsignBox.Location = new System.Drawing.Point(1041, 664);
+            this.studentsignBox.Name = "studentsignBox";
+            this.studentsignBox.Size = new System.Drawing.Size(156, 92);
+            this.studentsignBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.studentsignBox.TabIndex = 66;
+            this.studentsignBox.TabStop = false;
+            // 
+            // parentsignBox
+            // 
+            this.parentsignBox.Location = new System.Drawing.Point(1220, 664);
+            this.parentsignBox.Name = "parentsignBox";
+            this.parentsignBox.Size = new System.Drawing.Size(158, 92);
+            this.parentsignBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.parentsignBox.TabIndex = 67;
+            this.parentsignBox.TabStop = false;
+            // 
+            // streetBox
+            // 
+            this.streetBox.Location = new System.Drawing.Point(588, 497);
+            this.streetBox.Margin = new System.Windows.Forms.Padding(2);
+            this.streetBox.Name = "streetBox";
+            this.streetBox.Size = new System.Drawing.Size(135, 20);
+            this.streetBox.TabIndex = 68;
+            // 
+            // street2Box
+            // 
+            this.street2Box.Location = new System.Drawing.Point(588, 521);
+            this.street2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.street2Box.Name = "street2Box";
+            this.street2Box.Size = new System.Drawing.Size(135, 20);
+            this.street2Box.TabIndex = 69;
+            // 
+            // districtBox
+            // 
+            this.districtBox.Location = new System.Drawing.Point(588, 545);
+            this.districtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.districtBox.Name = "districtBox";
+            this.districtBox.Size = new System.Drawing.Size(135, 20);
+            this.districtBox.TabIndex = 70;
+            // 
+            // pinBox
+            // 
+            this.pinBox.Location = new System.Drawing.Point(588, 569);
+            this.pinBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pinBox.Name = "pinBox";
+            this.pinBox.Size = new System.Drawing.Size(135, 20);
+            this.pinBox.TabIndex = 71;
+            // 
+            // stateBox
+            // 
+            this.stateBox.Location = new System.Drawing.Point(588, 593);
+            this.stateBox.Margin = new System.Windows.Forms.Padding(2);
+            this.stateBox.Name = "stateBox";
+            this.stateBox.Size = new System.Drawing.Size(135, 20);
+            this.stateBox.TabIndex = 72;
+            // 
+            // houseBox
+            // 
+            this.houseBox.Location = new System.Drawing.Point(858, 473);
+            this.houseBox.Margin = new System.Windows.Forms.Padding(2);
+            this.houseBox.Name = "houseBox";
+            this.houseBox.Size = new System.Drawing.Size(135, 20);
+            this.houseBox.TabIndex = 73;
+            // 
+            // street3Box
+            // 
+            this.street3Box.Location = new System.Drawing.Point(858, 497);
+            this.street3Box.Margin = new System.Windows.Forms.Padding(2);
+            this.street3Box.Name = "street3Box";
+            this.street3Box.Size = new System.Drawing.Size(135, 20);
+            this.street3Box.TabIndex = 74;
+            // 
+            // street4Box
+            // 
+            this.street4Box.Location = new System.Drawing.Point(858, 521);
+            this.street4Box.Margin = new System.Windows.Forms.Padding(2);
+            this.street4Box.Name = "street4Box";
+            this.street4Box.Size = new System.Drawing.Size(135, 20);
+            this.street4Box.TabIndex = 75;
+            // 
+            // district2Box
+            // 
+            this.district2Box.Location = new System.Drawing.Point(858, 545);
+            this.district2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.district2Box.Name = "district2Box";
+            this.district2Box.Size = new System.Drawing.Size(135, 20);
+            this.district2Box.TabIndex = 76;
+            // 
+            // pin2Box
+            // 
+            this.pin2Box.Location = new System.Drawing.Point(858, 569);
+            this.pin2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.pin2Box.Name = "pin2Box";
+            this.pin2Box.Size = new System.Drawing.Size(135, 20);
+            this.pin2Box.TabIndex = 77;
+            // 
+            // state2Box
+            // 
+            this.state2Box.Location = new System.Drawing.Point(858, 593);
+            this.state2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.state2Box.Name = "state2Box";
+            this.state2Box.Size = new System.Drawing.Size(135, 20);
+            this.state2Box.TabIndex = 78;
+            // 
+            // ishostelerBox
+            // 
+            this.ishostelerBox.Location = new System.Drawing.Point(588, 664);
+            this.ishostelerBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ishostelerBox.Name = "ishostelerBox";
+            this.ishostelerBox.Size = new System.Drawing.Size(135, 20);
+            this.ishostelerBox.TabIndex = 79;
+            // 
+            // collegeemailBox
+            // 
+            this.collegeemailBox.Location = new System.Drawing.Point(588, 688);
+            this.collegeemailBox.Margin = new System.Windows.Forms.Padding(2);
+            this.collegeemailBox.Name = "collegeemailBox";
+            this.collegeemailBox.Size = new System.Drawing.Size(135, 20);
+            this.collegeemailBox.TabIndex = 80;
+            // 
+            // boardingpointBox
+            // 
+            this.boardingpointBox.Location = new System.Drawing.Point(858, 688);
+            this.boardingpointBox.Margin = new System.Windows.Forms.Padding(2);
+            this.boardingpointBox.Name = "boardingpointBox";
+            this.boardingpointBox.Size = new System.Drawing.Size(135, 20);
+            this.boardingpointBox.TabIndex = 81;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 805);
+            this.Controls.Add(this.boardingpointBox);
+            this.Controls.Add(this.collegeemailBox);
+            this.Controls.Add(this.ishostelerBox);
+            this.Controls.Add(this.state2Box);
+            this.Controls.Add(this.pin2Box);
+            this.Controls.Add(this.district2Box);
+            this.Controls.Add(this.street4Box);
+            this.Controls.Add(this.street3Box);
+            this.Controls.Add(this.houseBox);
+            this.Controls.Add(this.stateBox);
+            this.Controls.Add(this.pinBox);
+            this.Controls.Add(this.districtBox);
+            this.Controls.Add(this.street2Box);
+            this.Controls.Add(this.streetBox);
+            this.Controls.Add(this.parentsignBox);
+            this.Controls.Add(this.studentsignBox);
+            this.Controls.Add(this.studentpicBox);
+            this.Controls.Add(this.studentnameBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.medicalissuesBox);
             this.Controls.Add(this.label13);
@@ -688,6 +877,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentpicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsignBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parentsignBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,6 +948,24 @@
         private System.Windows.Forms.TextBox scolarshipBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox medicalissuesBox;
+        private System.Windows.Forms.Label studentnameBox;
+        private System.Windows.Forms.PictureBox studentpicBox;
+        private System.Windows.Forms.PictureBox studentsignBox;
+        private System.Windows.Forms.PictureBox parentsignBox;
+        private System.Windows.Forms.TextBox streetBox;
+        private System.Windows.Forms.TextBox street2Box;
+        private System.Windows.Forms.TextBox districtBox;
+        private System.Windows.Forms.TextBox pinBox;
+        private System.Windows.Forms.TextBox stateBox;
+        private System.Windows.Forms.TextBox houseBox;
+        private System.Windows.Forms.TextBox street3Box;
+        private System.Windows.Forms.TextBox street4Box;
+        private System.Windows.Forms.TextBox district2Box;
+        private System.Windows.Forms.TextBox pin2Box;
+        private System.Windows.Forms.TextBox state2Box;
+        private System.Windows.Forms.TextBox ishostelerBox;
+        private System.Windows.Forms.TextBox collegeemailBox;
+        private System.Windows.Forms.TextBox boardingpointBox;
     }
 }
 
