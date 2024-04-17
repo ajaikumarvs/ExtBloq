@@ -26,9 +26,23 @@ namespace ExtBloq
     public partial class Form1 : Form
     {
         private Bitmap originalImage;
-        private Rectangle nameROI = new Rectangle(209, 504, 1056, 58); // Example ROI coordinates for name field
+        private Rectangle nameROI = new Rectangle(202, 507, 853, 76); // Example ROI coordinates for name field
+        private Rectangle sexROI = new Rectangle();  //Sex ROI
+        private Rectangle branchROI = new Rectangle();  //Branch ROI
+        private Rectangle dobROI = new Rectangle(); //DOB ROI
+        private Rectangle rollnoROI = new Rectangle(); //Roll No ROI
+        private Rectangle admissionnoROI = new Rectangle();// admission number ROI
+        private Rectangle rankROI = new Rectangle(); // rank entrance test
+        private Rectangle dateofjoinROI = new Rectangle(); // date of joining ROI
+        private Rectangle uniregnoROI= new Rectangle(); //university registration number ROI
+        private Rectangle addln1ROI = new Rectangle(); // address line 1 
+        private Rectangle addln2ROI = new Rectangle(); // address line 2 
+        private Rectangle mobilenumROI = new Rectangle();
         private Rectangle addressROI = new Rectangle(365, 783, 1277, 60); // Example ROI coordinates for address field
         private Rectangle phoneROI = new Rectangle(50, 190, 150, 50); // Example ROI coordinates for phone field
+   
+       
+
 
 
         public Form1()
