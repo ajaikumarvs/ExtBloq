@@ -85,6 +85,12 @@
             this.permaddfatherBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.officialaddfatherBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.fulladdmotherBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.scolarshipBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.medicalissuesBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -459,7 +465,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1042, 502);
+            this.label7.Location = new System.Drawing.Point(1040, 540);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 47;
@@ -467,7 +473,7 @@
             // 
             // eduqualificationBox
             // 
-            this.eduqualificationBox.Location = new System.Drawing.Point(1149, 502);
+            this.eduqualificationBox.Location = new System.Drawing.Point(1147, 540);
             this.eduqualificationBox.Margin = new System.Windows.Forms.Padding(2);
             this.eduqualificationBox.Name = "eduqualificationBox";
             this.eduqualificationBox.Size = new System.Drawing.Size(230, 20);
@@ -476,7 +482,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1042, 526);
+            this.label8.Location = new System.Drawing.Point(1040, 564);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 49;
@@ -484,7 +490,7 @@
             // 
             // phymarkBox
             // 
-            this.phymarkBox.Location = new System.Drawing.Point(1149, 526);
+            this.phymarkBox.Location = new System.Drawing.Point(1147, 564);
             this.phymarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.phymarkBox.Name = "phymarkBox";
             this.phymarkBox.Size = new System.Drawing.Size(230, 20);
@@ -493,7 +499,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1042, 550);
+            this.label9.Location = new System.Drawing.Point(1040, 588);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 51;
@@ -501,7 +507,7 @@
             // 
             // chemmarkBox
             // 
-            this.chemmarkBox.Location = new System.Drawing.Point(1149, 550);
+            this.chemmarkBox.Location = new System.Drawing.Point(1147, 588);
             this.chemmarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.chemmarkBox.Name = "chemmarkBox";
             this.chemmarkBox.Size = new System.Drawing.Size(230, 20);
@@ -510,7 +516,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1042, 574);
+            this.label10.Location = new System.Drawing.Point(1040, 612);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 53;
@@ -518,7 +524,7 @@
             // 
             // mathsmarkBox
             // 
-            this.mathsmarkBox.Location = new System.Drawing.Point(1149, 574);
+            this.mathsmarkBox.Location = new System.Drawing.Point(1147, 612);
             this.mathsmarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.mathsmarkBox.Name = "mathsmarkBox";
             this.mathsmarkBox.Size = new System.Drawing.Size(230, 20);
@@ -558,11 +564,68 @@
             this.officialaddfatherBox.Size = new System.Drawing.Size(230, 20);
             this.officialaddfatherBox.TabIndex = 56;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1042, 470);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 26);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Full address\r\nof Mother : \r\n";
+            // 
+            // fulladdmotherBox
+            // 
+            this.fulladdmotherBox.Location = new System.Drawing.Point(1149, 473);
+            this.fulladdmotherBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fulladdmotherBox.Name = "fulladdmotherBox";
+            this.fulladdmotherBox.Size = new System.Drawing.Size(230, 20);
+            this.fulladdmotherBox.TabIndex = 58;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1040, 640);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 13);
+            this.label13.TabIndex = 61;
+            this.label13.Text = "Scholarship : ";
+            // 
+            // scolarshipBox
+            // 
+            this.scolarshipBox.Location = new System.Drawing.Point(1147, 640);
+            this.scolarshipBox.Margin = new System.Windows.Forms.Padding(2);
+            this.scolarshipBox.Name = "scolarshipBox";
+            this.scolarshipBox.Size = new System.Drawing.Size(230, 20);
+            this.scolarshipBox.TabIndex = 60;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1040, 664);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 13);
+            this.label14.TabIndex = 63;
+            this.label14.Text = "Medical Issues : ";
+            // 
+            // medicalissuesBox
+            // 
+            this.medicalissuesBox.Location = new System.Drawing.Point(1147, 664);
+            this.medicalissuesBox.Margin = new System.Windows.Forms.Padding(2);
+            this.medicalissuesBox.Name = "medicalissuesBox";
+            this.medicalissuesBox.Size = new System.Drawing.Size(230, 20);
+            this.medicalissuesBox.TabIndex = 62;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 805);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.medicalissuesBox);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.scolarshipBox);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.fulladdmotherBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.officialaddfatherBox);
             this.Controls.Add(this.permfatheraddBox);
@@ -618,6 +681,7 @@
             this.Controls.Add(this.addresstextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
+            this.Cursor = System.Windows.Forms.Cursors.No;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "ExtBloq";
@@ -686,6 +750,12 @@
         private System.Windows.Forms.TextBox permaddfatherBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox officialaddfatherBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox fulladdmotherBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox scolarshipBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox medicalissuesBox;
     }
 }
 

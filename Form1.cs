@@ -58,10 +58,10 @@ namespace ExtBloq
         private Rectangle fatheroffadd2ROI = new Rectangle(128,1605,1401,67); // official address of father line 2
         private Rectangle fatherofftelephonenumberROI = new Rectangle(306,1678,613,65); // official telephone number
         private Rectangle stdcodeROI = new Rectangle(1042,1676,484,68); // STD code
-        private Rectangle motheroffaddROI = new Rectangle(); // official address of mother
-        private Rectangle motherofftelephonenumberROI = new Rectangle(); // official telephone number of mother
-        private Rectangle motheroffstdcodeROI = new Rectangle(); // STD code of mother
-        private Rectangle scholarshipROI = new Rectangle(); // Scholarship
+        private Rectangle motheroffaddROI = new Rectangle(718,1750,813,66); // official address of mother
+        private Rectangle motherofftelephonenumberROI = new Rectangle(301,1824,618,64); // official telephone number of mother
+        private Rectangle motheroffstdcodeROI = new Rectangle(1042,1824,490,64); // STD code of mother
+        private Rectangle scholarshipROI = new Rectangle(793,1893,736,68); // Scholarship
         private Rectangle medicalissuesROI = new Rectangle(); //    Medical issues
 
 
@@ -139,6 +139,10 @@ namespace ExtBloq
                 string officialaddFather2 = ExtractTextFromROI(fatheroffadd2ROI);
                 string officialfatherphoneno = ExtractTextFromROI(fatherofftelephonenumberROI);
                 string stdcode = ExtractTextFromROI(stdcodeROI);
+                string fulladdmother = ExtractTextFromROI(motheroffaddROI);
+                string motherphoneno = ExtractTextFromROI(motherofftelephonenumberROI);
+                string motherphonestdcode = ExtractTextFromROI(motheroffstdcodeROI);
+                string scholarship = ExtractTextFromROI(scholarshipROI);
 
                 // Display extracted data
                 nametextBox.Text = name;
@@ -165,8 +169,9 @@ namespace ExtBloq
                 fathermobileBox.Text = permaddtelephonenumber;
                 officialaddfatherBox.Text = officaladdFather1 + " " + officialaddFather2;
                 officephoneBox.Text = stdcode + " " + officialfatherphoneno;
-
-
+                fulladdmotherBox.Text = fulladdmother;
+                mothermobileBox.Text = motherphonestdcode + " " + motherphoneno;
+                scolarshipBox.Text = scholarship;
                 
             }
 
