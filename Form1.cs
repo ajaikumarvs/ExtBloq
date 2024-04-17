@@ -49,7 +49,7 @@ namespace ExtBloq
         private Rectangle eduqualifypercentROI = new Rectangle(630,1176,901,60); // Educational Qualification Percentage 
         private Rectangle physicsmarkROI = new Rectangle(221,1250,336,56); // Physics marks
         private Rectangle chemistrymarkROI = new Rectangle(692,1244,289,64); // Chemistry marks
-        private Rectangle mathsmarkROI = new Rectangle(); // Maths marks
+        private Rectangle mathsmarkROI = new Rectangle(1150,1243,385,66); // Maths marks
         private Rectangle permanantadd1ROI = new Rectangle(); // Permanent address of father line 1
         private Rectangle permanantadd2ROI = new Rectangle(); // Permanent address of father line 2 
         private Rectangle telephonenumberROI = new Rectangle(); // Telephone number
@@ -129,6 +129,9 @@ namespace ExtBloq
                 string homephoneno = ExtractTextFromROI(homephonenoROI);
                 string religion = ExtractTextFromROI(religionROI);
                 string eduqualifypercent = ExtractTextFromROI(eduqualifypercentROI);
+                string phymarks = ExtractTextFromROI(physicsmarkROI);
+                string chemmarks = ExtractTextFromROI(chemistrymarkROI);
+                string mathsmarks = ExtractTextFromROI(mathsmarkROI);
 
                 // Display extracted data
                 nametextBox.Text = name;
@@ -148,6 +151,9 @@ namespace ExtBloq
                 homephonenoBox.Text = homephoneno;
                 religionBox.Text = religion;
                 eduqualificationBox.Text = eduqualifypercent;
+                phymarkBox.Text = phymarks;
+                chemmarkBox.Text = chemmarks;
+                mathsmarkBox.Text = mathsmarks;
 
                 
             }

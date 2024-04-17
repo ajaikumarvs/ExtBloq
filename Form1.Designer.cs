@@ -80,7 +80,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.chemmarkBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.mathmarkBox = new System.Windows.Forms.TextBox();
+            this.mathsmarkBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -512,13 +512,13 @@
             this.label10.TabIndex = 53;
             this.label10.Text = "Mathematics :";
             // 
-            // mathmarkBox
+            // mathsmarkBox
             // 
-            this.mathmarkBox.Location = new System.Drawing.Point(1128, 482);
-            this.mathmarkBox.Margin = new System.Windows.Forms.Padding(2);
-            this.mathmarkBox.Name = "mathmarkBox";
-            this.mathmarkBox.Size = new System.Drawing.Size(230, 20);
-            this.mathmarkBox.TabIndex = 52;
+            this.mathsmarkBox.Location = new System.Drawing.Point(1128, 482);
+            this.mathsmarkBox.Margin = new System.Windows.Forms.Padding(2);
+            this.mathsmarkBox.Name = "mathsmarkBox";
+            this.mathsmarkBox.Size = new System.Drawing.Size(230, 20);
+            this.mathsmarkBox.TabIndex = 52;
             // 
             // Form1
             // 
@@ -526,7 +526,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1369, 804);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.mathmarkBox);
+            this.Controls.Add(this.mathsmarkBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.chemmarkBox);
             this.Controls.Add(this.label8);
@@ -639,7 +639,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox chemmarkBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox mathmarkBox;
+        private System.Windows.Forms.TextBox mathsmarkBox;
     }
 }
 
