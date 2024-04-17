@@ -50,8 +50,8 @@ namespace ExtBloq
         private Rectangle physicsmarkROI = new Rectangle(221,1250,336,56); // Physics marks
         private Rectangle chemistrymarkROI = new Rectangle(692,1244,289,64); // Chemistry marks
         private Rectangle mathsmarkROI = new Rectangle(1150,1243,385,66); // Maths marks
-        private Rectangle permanantadd1ROI = new Rectangle(); // Permanent address of father line 1
-        private Rectangle permanantadd2ROI = new Rectangle(); // Permanent address of father line 2 
+        private Rectangle permanantadd1ROI = new Rectangle(484,1316,1048,66); // Permanent address of father line 1
+        private Rectangle permanantadd2ROI = new Rectangle(126,1387,1364,66); // Permanent address of father line 2 
         private Rectangle telephonenumberROI = new Rectangle(); // Telephone number
         private Rectangle annualincomeROI = new Rectangle(1119, 1462, 368, 61); // Annual income
         private Rectangle fatheroffadd1ROI = new Rectangle(); // official address of father line 1
@@ -132,6 +132,8 @@ namespace ExtBloq
                 string phymarks = ExtractTextFromROI(physicsmarkROI);
                 string chemmarks = ExtractTextFromROI(chemistrymarkROI);
                 string mathsmarks = ExtractTextFromROI(mathsmarkROI);
+                string permaddfather1 = ExtractTextFromROI(permanantadd1ROI);
+                string permaddfather2 = ExtractTextFromROI(permanantadd2ROI);
 
                 // Display extracted data
                 nametextBox.Text = name;
@@ -154,6 +156,7 @@ namespace ExtBloq
                 phymarkBox.Text = phymarks;
                 chemmarkBox.Text = chemmarks;
                 mathsmarkBox.Text = mathsmarks;
+                permaddfatherBox.Text = permaddfather1 + " " + permaddfather2;
 
                 
             }
@@ -191,6 +194,8 @@ namespace ExtBloq
         {
 
         }
+
+       
     }
     }
 

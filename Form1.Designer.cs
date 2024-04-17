@@ -81,6 +81,8 @@
             this.chemmarkBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.mathsmarkBox = new System.Windows.Forms.TextBox();
+            this.permfatheraddBox = new System.Windows.Forms.Label();
+            this.permaddfatherBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -354,7 +356,7 @@
             // 
             // branchBox
             // 
-            this.branchBox.Location = new System.Drawing.Point(1128, 279);
+            this.branchBox.Location = new System.Drawing.Point(1149, 282);
             this.branchBox.Margin = new System.Windows.Forms.Padding(2);
             this.branchBox.Name = "branchBox";
             this.branchBox.Size = new System.Drawing.Size(230, 20);
@@ -362,7 +364,7 @@
             // 
             // rollnoBox
             // 
-            this.rollnoBox.Location = new System.Drawing.Point(1128, 303);
+            this.rollnoBox.Location = new System.Drawing.Point(1149, 306);
             this.rollnoBox.Margin = new System.Windows.Forms.Padding(2);
             this.rollnoBox.Name = "rollnoBox";
             this.rollnoBox.Size = new System.Drawing.Size(230, 20);
@@ -388,7 +390,7 @@
             // 
             // rankBox
             // 
-            this.rankBox.Location = new System.Drawing.Point(1128, 327);
+            this.rankBox.Location = new System.Drawing.Point(1149, 330);
             this.rankBox.Margin = new System.Windows.Forms.Padding(2);
             this.rankBox.Name = "rankBox";
             this.rankBox.Size = new System.Drawing.Size(230, 20);
@@ -396,7 +398,7 @@
             // 
             // dateofjoinBox
             // 
-            this.dateofjoinBox.Location = new System.Drawing.Point(1128, 351);
+            this.dateofjoinBox.Location = new System.Drawing.Point(1149, 354);
             this.dateofjoinBox.Margin = new System.Windows.Forms.Padding(2);
             this.dateofjoinBox.Name = "dateofjoinBox";
             this.dateofjoinBox.Size = new System.Drawing.Size(230, 20);
@@ -438,7 +440,7 @@
             // 
             // fulladdBox
             // 
-            this.fulladdBox.Location = new System.Drawing.Point(1128, 375);
+            this.fulladdBox.Location = new System.Drawing.Point(1149, 378);
             this.fulladdBox.Margin = new System.Windows.Forms.Padding(2);
             this.fulladdBox.Name = "fulladdBox";
             this.fulladdBox.Size = new System.Drawing.Size(230, 20);
@@ -455,7 +457,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1042, 413);
+            this.label7.Location = new System.Drawing.Point(1042, 502);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 47;
@@ -463,7 +465,7 @@
             // 
             // eduqualificationBox
             // 
-            this.eduqualificationBox.Location = new System.Drawing.Point(1128, 410);
+            this.eduqualificationBox.Location = new System.Drawing.Point(1149, 502);
             this.eduqualificationBox.Margin = new System.Windows.Forms.Padding(2);
             this.eduqualificationBox.Name = "eduqualificationBox";
             this.eduqualificationBox.Size = new System.Drawing.Size(230, 20);
@@ -472,7 +474,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1042, 437);
+            this.label8.Location = new System.Drawing.Point(1042, 526);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 49;
@@ -480,7 +482,7 @@
             // 
             // phymarkBox
             // 
-            this.phymarkBox.Location = new System.Drawing.Point(1128, 434);
+            this.phymarkBox.Location = new System.Drawing.Point(1149, 526);
             this.phymarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.phymarkBox.Name = "phymarkBox";
             this.phymarkBox.Size = new System.Drawing.Size(230, 20);
@@ -489,7 +491,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1042, 461);
+            this.label9.Location = new System.Drawing.Point(1042, 550);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 51;
@@ -497,7 +499,7 @@
             // 
             // chemmarkBox
             // 
-            this.chemmarkBox.Location = new System.Drawing.Point(1128, 458);
+            this.chemmarkBox.Location = new System.Drawing.Point(1149, 550);
             this.chemmarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.chemmarkBox.Name = "chemmarkBox";
             this.chemmarkBox.Size = new System.Drawing.Size(230, 20);
@@ -506,7 +508,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1042, 485);
+            this.label10.Location = new System.Drawing.Point(1042, 574);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 53;
@@ -514,17 +516,36 @@
             // 
             // mathsmarkBox
             // 
-            this.mathsmarkBox.Location = new System.Drawing.Point(1128, 482);
+            this.mathsmarkBox.Location = new System.Drawing.Point(1149, 574);
             this.mathsmarkBox.Margin = new System.Windows.Forms.Padding(2);
             this.mathsmarkBox.Name = "mathsmarkBox";
             this.mathsmarkBox.Size = new System.Drawing.Size(230, 20);
             this.mathsmarkBox.TabIndex = 52;
             // 
+            // permfatheraddBox
+            // 
+            this.permfatheraddBox.AutoSize = true;
+            this.permfatheraddBox.Location = new System.Drawing.Point(1042, 402);
+            this.permfatheraddBox.Name = "permfatheraddBox";
+            this.permfatheraddBox.Size = new System.Drawing.Size(99, 26);
+            this.permfatheraddBox.TabIndex = 55;
+            this.permfatheraddBox.Text = "Permanant \r\nAddress of Father : ";
+            // 
+            // permaddfatherBox
+            // 
+            this.permaddfatherBox.Location = new System.Drawing.Point(1149, 405);
+            this.permaddfatherBox.Margin = new System.Windows.Forms.Padding(2);
+            this.permaddfatherBox.Name = "permaddfatherBox";
+            this.permaddfatherBox.Size = new System.Drawing.Size(230, 20);
+            this.permaddfatherBox.TabIndex = 54;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1369, 804);
+            this.ClientSize = new System.Drawing.Size(1390, 805);
+            this.Controls.Add(this.permfatheraddBox);
+            this.Controls.Add(this.permaddfatherBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.mathsmarkBox);
             this.Controls.Add(this.label9);
@@ -640,6 +661,8 @@
         private System.Windows.Forms.TextBox chemmarkBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox mathsmarkBox;
+        private System.Windows.Forms.Label permfatheraddBox;
+        private System.Windows.Forms.TextBox permaddfatherBox;
     }
 }
 
