@@ -26,7 +26,7 @@ namespace ExtBloq
     public partial class Form1 : Form
     {
         private Bitmap originalImage;
-        private Rectangle nameROI = new Rectangle(365, 512, 1277, 58); // Example ROI coordinates for name field
+        private Rectangle nameROI = new Rectangle(209, 504, 1056, 58); // Example ROI coordinates for name field
         private Rectangle addressROI = new Rectangle(365, 783, 1277, 60); // Example ROI coordinates for address field
         private Rectangle phoneROI = new Rectangle(50, 190, 150, 50); // Example ROI coordinates for phone field
 
@@ -54,6 +54,9 @@ namespace ExtBloq
 
         private void button2_Click(object sender, EventArgs e)
         {
+            pictureBox2.Visible = true;
+            label1.Visible = false;
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -97,6 +100,11 @@ namespace ExtBloq
             }
 
         private void addresstextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
