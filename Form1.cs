@@ -211,7 +211,7 @@ namespace ExtBloq
                     g.DrawImage(originalImage, 0, 0, roi, GraphicsUnit.Pixel);
                 }
 
-                using (TesseractEngine engine = new TesseractEngine("C:\\Users\\ajaik\\Desktop\\Tesseract", "eng", EngineMode.Default))
+                using (TesseractEngine engine = new TesseractEngine("Tesseract", "eng", EngineMode.Default))
                 {
                     using (Tesseract.Page page = engine.Process(roiImage))
                     {
@@ -220,7 +220,7 @@ namespace ExtBloq
                     }
 
 
-                    }
+                }
                 }
             }
 
