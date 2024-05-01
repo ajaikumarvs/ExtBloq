@@ -14,6 +14,8 @@ using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
 using Emgu.CV.Util;
+using Tensorflow;
+using static Tensorflow.Binding;
 
 
 
@@ -204,25 +206,30 @@ namespace ExtBloq
 
         private string ExtractTextFromROI(Rectangle roi)
         {
-            using (Bitmap roiImage = new Bitmap(roi.Width, roi.Height))
-            {
-                using (Graphics g = Graphics.FromImage(roiImage))
-                {
-                    g.DrawImage(originalImage, 0, 0, roi, GraphicsUnit.Pixel);
-                }
 
-                using (TesseractEngine engine = new TesseractEngine("Tesseract", "eng", EngineMode.Default))
+                using (Bitmap roiImage = new Bitmap(roi.Width, roi.Height))
                 {
-                    using (Tesseract.Page page = engine.Process(roiImage))
+                    using (Graphics g = Graphics.FromImage(roiImage))
                     {
-                        return page.GetText();
-
+                        g.DrawImage(originalImage, 0, 0, roi, GraphicsUnit.Pixel);
                     }
 
+                    using (TesseractEngine engine = new TesseractEngine("Tesseract", labelOCRlang.Text, EngineMode.Default))
+                    {
+                        using (Tesseract.Page page = engine.Process(roiImage))
+                        {
+                            return page.GetText();
 
+                        }
+
+
+                    }
                 }
-                }
-            }
+            
+
+        }
+                   
+                    
 
         private Bitmap ExtractImageFromROI(Rectangle roi)
         {
@@ -247,6 +254,28 @@ namespace ExtBloq
         private void nametextBox_TextChanged(object sender, EventArgs e)
         {
             studentnameBox.Text = nametextBox.Text;
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxMal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMal.Checked == true)
+            {
+                labelOCRlang.Text = "mal";
+            }
+            else if (checkBoxMal.Checked == false)
+            {
+                labelOCRlang.Text = "eng";
+            }
         }
     }
     }

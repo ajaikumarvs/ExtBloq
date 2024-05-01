@@ -112,7 +112,15 @@
             this.label15 = new System.Windows.Forms.Label();
             this.currentdimensionsLabel = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxMal = new System.Windows.Forms.CheckBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonConvtoTxt = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkBoxHandwritten = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.labelOCRlang = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpicBox)).BeginInit();
@@ -789,7 +797,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
-            this.label15.Location = new System.Drawing.Point(112, 23);
+            this.label15.Location = new System.Drawing.Point(112, 10);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(188, 16);
             this.label15.TabIndex = 82;
@@ -809,22 +817,106 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // checkBox1
+            // checkBoxMal
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 54);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(76, 17);
-            this.checkBox1.TabIndex = 84;
-            this.checkBox1.Text = "Malayalam";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxMal.AutoSize = true;
+            this.checkBoxMal.Location = new System.Drawing.Point(12, 54);
+            this.checkBoxMal.Name = "checkBoxMal";
+            this.checkBoxMal.Size = new System.Drawing.Size(76, 17);
+            this.checkBoxMal.TabIndex = 84;
+            this.checkBoxMal.Text = "Malayalam";
+            this.checkBoxMal.UseVisualStyleBackColor = true;
+            this.checkBoxMal.CheckedChanged += new System.EventHandler(this.checkBoxMal_CheckedChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel3.Location = new System.Drawing.Point(1400, 55);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(30, 665);
+            this.panel3.TabIndex = 11;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1436, 55);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 20);
+            this.label16.TabIndex = 85;
+            this.label16.Text = "Quick Tools";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1440, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 48);
+            this.button1.TabIndex = 86;
+            this.button1.Text = "Export as CSV";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonConvtoTxt
+            // 
+            this.buttonConvtoTxt.Location = new System.Drawing.Point(1440, 139);
+            this.buttonConvtoTxt.Name = "buttonConvtoTxt";
+            this.buttonConvtoTxt.Size = new System.Drawing.Size(132, 48);
+            this.buttonConvtoTxt.TabIndex = 87;
+            this.buttonConvtoTxt.Text = "Convert to Text";
+            this.buttonConvtoTxt.UseVisualStyleBackColor = true;
+            this.buttonConvtoTxt.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1440, 193);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(132, 48);
+            this.button4.TabIndex = 88;
+            this.button4.Text = "Create Text Equivalent";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHandwritten
+            // 
+            this.checkBoxHandwritten.AutoSize = true;
+            this.checkBoxHandwritten.Location = new System.Drawing.Point(112, 29);
+            this.checkBoxHandwritten.Name = "checkBoxHandwritten";
+            this.checkBoxHandwritten.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxHandwritten.TabIndex = 89;
+            this.checkBoxHandwritten.Text = "Handwritten";
+            this.checkBoxHandwritten.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(11, 725);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 13);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Language Selected : ";
+            // 
+            // labelOCRlang
+            // 
+            this.labelOCRlang.AutoSize = true;
+            this.labelOCRlang.Location = new System.Drawing.Point(112, 725);
+            this.labelOCRlang.Name = "labelOCRlang";
+            this.labelOCRlang.Size = new System.Drawing.Size(25, 13);
+            this.labelOCRlang.TabIndex = 92;
+            this.labelOCRlang.Text = "eng";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 805);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(1640, 805);
+            this.Controls.Add(this.labelOCRlang);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.checkBoxHandwritten);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonConvtoTxt);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.checkBoxMal);
             this.Controls.Add(this.currentdimensionsLabel);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.boardingpointBox);
@@ -1003,7 +1095,15 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label currentdimensionsLabel;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxMal;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonConvtoTxt;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBoxHandwritten;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label labelOCRlang;
     }
 }
 
