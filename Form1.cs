@@ -73,7 +73,7 @@ namespace ExtBloq
         private Rectangle studentphotoROI = new Rectangle(1249,287,240,297); //Student photo
         private Rectangle studentsignphotoROI = new Rectangle(524,2035,373,91); //Student signature
         private Rectangle parentsignphotoROI = new Rectangle(1150, 2040, 380, 86); //Parent signature
-
+        
 
 
 

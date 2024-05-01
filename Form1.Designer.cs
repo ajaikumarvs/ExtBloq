@@ -184,6 +184,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(614, 402);
             this.label1.Name = "label1";
@@ -194,6 +195,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SkyBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F);
             this.label2.Location = new System.Drawing.Point(640, 423);
             this.label2.Name = "label2";
@@ -889,9 +891,9 @@
             this.labelOCRlang.AutoSize = true;
             this.labelOCRlang.Location = new System.Drawing.Point(112, 725);
             this.labelOCRlang.Name = "labelOCRlang";
-            this.labelOCRlang.Size = new System.Drawing.Size(13, 13);
+            this.labelOCRlang.Size = new System.Drawing.Size(25, 13);
             this.labelOCRlang.TabIndex = 92;
-            this.labelOCRlang.Text = "5";
+            this.labelOCRlang.Text = "eng";
             // 
             // Form1
             // 
