@@ -117,7 +117,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonConvtoTxt = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.checkBoxHandwritten = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.labelOCRlang = new System.Windows.Forms.Label();
@@ -862,18 +861,9 @@
             this.buttonConvtoTxt.Name = "buttonConvtoTxt";
             this.buttonConvtoTxt.Size = new System.Drawing.Size(132, 48);
             this.buttonConvtoTxt.TabIndex = 87;
-            this.buttonConvtoTxt.Text = "Convert to Text";
+            this.buttonConvtoTxt.Text = "Image && Text";
             this.buttonConvtoTxt.UseVisualStyleBackColor = true;
             this.buttonConvtoTxt.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(1440, 193);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 48);
-            this.button4.TabIndex = 88;
-            this.button4.Text = "Create Text Equivalent";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // checkBoxHandwritten
             // 
@@ -899,9 +889,9 @@
             this.labelOCRlang.AutoSize = true;
             this.labelOCRlang.Location = new System.Drawing.Point(112, 725);
             this.labelOCRlang.Name = "labelOCRlang";
-            this.labelOCRlang.Size = new System.Drawing.Size(25, 13);
+            this.labelOCRlang.Size = new System.Drawing.Size(13, 13);
             this.labelOCRlang.TabIndex = 92;
-            this.labelOCRlang.Text = "eng";
+            this.labelOCRlang.Text = "5";
             // 
             // Form1
             // 
@@ -911,7 +901,6 @@
             this.Controls.Add(this.labelOCRlang);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.checkBoxHandwritten);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.buttonConvtoTxt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
@@ -1100,7 +1089,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonConvtoTxt;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox checkBoxHandwritten;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label labelOCRlang;

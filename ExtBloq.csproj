@@ -194,11 +194,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvtoText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvtoText.Designer.cs">
+      <DependentUpon>ConvtoText.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ipfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ipfs.Designer.cs">
+      <DependentUpon>ipfs.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -208,8 +220,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConvtoText.resx">
+      <DependentUpon>ConvtoText.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ipfs.resx">
+      <DependentUpon>ipfs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

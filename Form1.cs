@@ -16,6 +16,7 @@ using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Tensorflow;
 using static Tensorflow.Binding;
+using System.Security.Cryptography.X509Certificates;
 
 
 
@@ -27,6 +28,10 @@ namespace ExtBloq
 {
     public partial class Form1 : Form
     {
+
+
+        public string filepath;
+        
         private Bitmap originalImage;
         private Rectangle nameROI = new Rectangle(202, 507, 853, 76); // ROI coordinates for name field
         private Rectangle sexROI = new Rectangle(1098,507,140,73);  //Sex ROI
@@ -118,7 +123,7 @@ namespace ExtBloq
 
                 originalImage = new Bitmap(openFileDialog.FileName);
                 pictureBox1.Image = originalImage;
-
+                filepath = openFileDialog.FileName;
                 //display current dimensions of the image
                 currentdimensionsLabel.Text = pictureBox1.Image.Width + " x " + pictureBox1.Image.Height;
                 if (currentdimensionsLabel.Text != "1653 x 2338")
@@ -264,6 +269,10 @@ namespace ExtBloq
         private void button3_Click(object sender, EventArgs e)
         {
 
+                
+
+            ConvtoText convForm = new ConvtoText(filepath);
+            convForm.ShowDialog();
         }
 
         private void checkBoxMal_CheckedChanged(object sender, EventArgs e)
