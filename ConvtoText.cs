@@ -192,7 +192,7 @@ namespace ExtBloq
 
         private void buttonCopyAll_Click(object sender, EventArgs e)
         {
-
+            Clipboard.SetDataObject(outputTextBox.Text);
         }
     }
 }

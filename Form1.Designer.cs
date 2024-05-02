@@ -120,6 +120,7 @@
             this.checkBoxHandwritten = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.labelOCRlang = new System.Windows.Forms.Label();
+            this.buttonUpload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentpicBox)).BeginInit();
@@ -895,11 +896,22 @@
             this.labelOCRlang.TabIndex = 92;
             this.labelOCRlang.Text = "eng";
             // 
+            // buttonUpload
+            // 
+            this.buttonUpload.Location = new System.Drawing.Point(1440, 200);
+            this.buttonUpload.Name = "buttonUpload";
+            this.buttonUpload.Size = new System.Drawing.Size(132, 48);
+            this.buttonUpload.TabIndex = 93;
+            this.buttonUpload.Text = "Upload to IPFS";
+            this.buttonUpload.UseVisualStyleBackColor = true;
+            this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1640, 805);
+            this.Controls.Add(this.buttonUpload);
             this.Controls.Add(this.labelOCRlang);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.checkBoxHandwritten);
@@ -1094,6 +1106,7 @@
         private System.Windows.Forms.CheckBox checkBoxHandwritten;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label labelOCRlang;
+        private System.Windows.Forms.Button buttonUpload;
     }
 }
 

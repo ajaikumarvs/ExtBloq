@@ -277,6 +277,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonOpen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConvtoText";
             this.Text = "Convert to Text";
             this.Load += new System.EventHandler(this.ConvtoText_Load);

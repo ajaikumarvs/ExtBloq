@@ -17,6 +17,7 @@ using Emgu.CV.Util;
 using Tensorflow;
 using static Tensorflow.Binding;
 using System.Security.Cryptography.X509Certificates;
+using iText.Commons.Bouncycastle.Asn1.Cmp;
 
 
 
@@ -285,6 +286,12 @@ namespace ExtBloq
             {
                 labelOCRlang.Text = "eng";
             }
+        }
+
+        private void buttonUpload_Click(object sender, EventArgs e)
+        {
+            ipfs ipfsForm = new ipfs(filepath);
+            ipfsForm.ShowDialog();
         }
     }
     }
