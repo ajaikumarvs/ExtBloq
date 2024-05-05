@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WIA;
+using System.Threading;
 
 using System.Drawing.Imaging;
 
@@ -29,7 +30,7 @@ namespace ExtBloq
 
         private void scan_Load(object sender, EventArgs e)
         {
-            /*
+            
             // Populate listbox with available scanners
             foreach (DeviceInfo scanner in deviceManager.DeviceInfos)
             {
@@ -38,7 +39,7 @@ namespace ExtBloq
                     listBox1.Items.Add(scanner.Properties["Name"].get_Value());
                 }
             }
-            */
+            
         }
         private bool IsScannerReady(DeviceInfo scannerInfo)
         {
@@ -120,8 +121,10 @@ namespace ExtBloq
             }
         }
 
-       private void buttonScan_Click(object sender, EventArgs e)
-        {// Check if a scanner is selected
+       private async void buttonScan_Click(object sender, EventArgs e)
+        {
+
+            // Check if a scanner is selected
             if (listBox1.SelectedItem == null)
             {
                 MessageBox.Show("Please select a scanner.");
@@ -150,22 +153,46 @@ namespace ExtBloq
 
             // Scan document
             Item scannerItem = scanner.Items[1];
-            
-            ImageFile scannedImage = (ImageFile)scannerItem.Transfer(WIA.FormatID.wiaFormatJPEG);
 
+            // Get total number of items to scan
+            int totalItemsToScan = scanner.Items.Count;
 
+            // Reset progress bar
+            progressBar1.Value = 0;
+            progressBar1.Maximum = totalItemsToScan;
 
-            // Retrieve image data
-            byte[] imageData = (byte[])scannedImage.FileData.get_BinaryData();
-
-            // Create a MemoryStream from the image data
-            using (MemoryStream memoryStream = new MemoryStream(imageData))
+            for (int i = 1; i <= totalItemsToScan; i++)
             {
-                // Display scanned image in picturebox
-                pictureBox1.Image = Image.FromStream(memoryStream);
-            }
+                // Transfer the image
+                ImageFile scannedImage = (ImageFile)scannerItem.Transfer(WIA.FormatID.wiaFormatJPEG);
 
-            MessageBox.Show("Scan Complete!");
+                // Retrieve image data
+                byte[] imageData = (byte[])scannedImage.FileData.get_BinaryData();
+
+                // Create a MemoryStream from the image data
+                using (MemoryStream memoryStream = new MemoryStream(imageData))
+                {
+                    // Display scanned image in picturebox
+                    pictureBox1.Image = Image.FromStream(memoryStream);
+                }
+
+                // Update progress bar
+                progressBar1.Value = i;
+
+                // Add a delay to show the progress
+                await Task.Delay(500);
+
+                // Check if it's the last item
+                if (i == totalItemsToScan)
+                {
+                    MessageBox.Show("Scan Complete!");
+                }
+                else
+                {
+                    // Get the next item
+                    scannerItem = scanner.Items[i + 1];
+                }
+            }
         }
 
         private void buttonRefreshList_Click(object sender, EventArgs e)
